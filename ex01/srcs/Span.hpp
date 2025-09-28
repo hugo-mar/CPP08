@@ -6,7 +6,7 @@
 /*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 17:05:20 by hugo-mar          #+#    #+#             */
-/*   Updated: 2025/09/22 18:57:59 by hugo-mar         ###   ########.fr       */
+/*   Updated: 2025/09/28 11:17:17 by hugo-mar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define SPAN_HPP
 
 # include <vector>
-# include <stdexcept>
 # include <cstddef>
 
 class Span

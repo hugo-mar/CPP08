@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hugo-mar <hugo-mar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/26 23:38:15 by hugo-mar          #+#    #+#             */
+/*   Updated: 2025/09/28 10:36:04 by hugo-mar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "easyfind.hpp"
 #include <iostream>
 #include <vector>
 #include <list>
 #include <deque>
-#include <iterator> 			// std::distance
+#include <iterator> 		// std::distance
+
+void	printHeader(const char* title) {
+	std::cout << "\n-----------" << title << "-----------\n";
+}
 
 // Auxiliary function to print containers
 template <typename C>
@@ -49,7 +65,7 @@ void testConst(const C& c, int value, const char* name) {
 
 int main() {
 
-	// Vector
+	printHeader("Vector tests");
 	{
 		int arrV[] = {1, 3, 5, 7, 9, 3};
 		std::vector<int> v(arrV, arrV + (sizeof(arrV) / sizeof(arrV[0])));
@@ -60,9 +76,7 @@ int main() {
 		testConst(cV, 42, "const vector");
 	}
 
-	std::cout << "---------------------------\n";
-
-	// List
+	printHeader("List tests");
 	{
 		int arrL[] = {2, 4, 6, 8, 0};
 		std::list<int> l(arrL, arrL + (sizeof(arrL) / sizeof(arrL[0])));
@@ -73,9 +87,7 @@ int main() {
 		testConst(cL, 42, "const list");
 	}
 
-	std::cout << "---------------------------\n";
-
-	// Deque
+	printHeader("Deque tests");
 	{
 		int arrD[] = {5, 5, 10, 15};
 		std::deque<int> d(arrD, arrD + (sizeof(arrD) / sizeof(arrD[0])));
